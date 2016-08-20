@@ -87,3 +87,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+pybble/__javascript__
+__javascript__
+app.js
