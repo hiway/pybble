@@ -1,4 +1,4 @@
-from pybble import console, UI, websocket
+from pybble.pebblejs import console, UI, websocket
 
 
 class WebsocketTest(object):
