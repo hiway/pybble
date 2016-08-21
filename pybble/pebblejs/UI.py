@@ -21,4 +21,25 @@ def Menu(**kwargs):
     return __new__(__UI.Menu(kwargs))
 
 
+# todo: Elements: Circle, Image, Line, Radial, Rect, Text, TimeText
+
+
+def Accel():
+    return require('ui/accel')
+
+
+def Voice():
+    return require('ui/voice')
+
+
+def Vibe():
+    return require('ui/vibe')
+
+
+def Light():
+    return require('ui/light')
+
+
+
+
 __pragma__('nokwargs')

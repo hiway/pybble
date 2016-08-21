@@ -1,6 +1,8 @@
 def js_require(lib):
     return require(lib)
 
+from .websocket import websocket
+from .platform import Platform
+from . import UI
 
-def websocket(url):
-    return __new__(WebSocket(url))
+__ALL__ = [UI, Platform, websocket]
