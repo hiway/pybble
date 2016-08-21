@@ -41,7 +41,7 @@ parity with Pebble.js (or Rocky.js, whichever works better, or at all)
   - In terminal, run `./build.sh`
   - This will create an app.js file next to your app.py
   - Copy the content of app.js
-  - Head over to https://cloudpebble.net/, create a new project
+  - Head over to https://cloudpebble.net/, create a new Pebble.JS project
   - Replace contents of app.js on cloudpebble with the minified,
     auto-generated code from your computer.
   - Tap 'Run'
