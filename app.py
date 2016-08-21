@@ -1,34 +1,50 @@
 from pybble import console, UI, websocket
 
 
-def test_websock():
-    console.log('creating websocket')
-    socket = websocket('ws://192.168.1.204:8000/chat/')
-    socket.onopen = lambda e: console.log(
-        'Connected. {}'.format(e))
-    socket.onerror = lambda e: console.log(
-        'Unable to connect. Error: {}'.format(e))
+class WebsocketTest(object):
+    def __init__(self):
+        self.socket = None
+        self.connected = False
+
+    def connect(self, url):
+        self.socket = websocket(url)
+        self.socket.onerror = self.on_error
+        self.socket.onopen = self.on_open
+        self.socket.onclose = self.on_close
+        self.socket.onmessage = self.on_message
+
+    def on_error(self, error):
+        self.connected = False
+        console.log('Failed to connect.')
+        console.log('Error: \n{}'.format(error))
+
+    def on_open(self, event):
+        self.connected = True
+        console.log('Connected')
+        self.send('Hello Websockets!')
+
+    def on_close(self, event):
+        self.connected = False
+        console.log('Disconnected')
+
+    def send(self, message):
+        console.log('SEND: '.format(message))
+        self.socket.send(message)
+
+    def on_message(self, message):
+        console.log('RECV: '.format(message.data))
+        msg = UI.Card(title='RECV', body=message.data)
+        msg.show()
 
 
-def on_click_up(event):
-    """
-    A normal function for callback.
-    """
-    console.log('Up was clicked.')
+wsecho = WebsocketTest()
 
+home = UI.Card(title='Pybble!', subtitle='Python Apps for Pebble')
+home.body('Click SELECT to connect to Echo websocket, and UP/DOWN'
+          'buttons to send messages to test the connection.')
 
-home = UI.Card(title='Home')  # Initialize the card
+home.on('click', 'up', lambda e: wsecho.send('WS: Up was clicked'))
+home.on('click', 'select', lambda e: wsecho.connect('wss://echo.websocket.org'))
+home.on('click', 'down', lambda e: wsecho.send('WS: Down was clicked'))
 
-# This works, because at runtime, this *is* Javascript
-home.body('Use it (almost) like they show in Pebble.js API :)')
-
-# A regular function as callback for click
-home.on('click', 'up', on_click_up)
-
-# A nameless function/ lambda for callback
-home.on('click', 'select', lambda e: console.log('Select was clicked.'))
-
-# Test webhook
-home.on('click', 'down', test_websock)
-
-home.show()  # Show the Card
+home.show()
