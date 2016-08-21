@@ -12,6 +12,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        pybble=cli:cli
+        pybble=pybble.cli:cli
     ''',
 )
