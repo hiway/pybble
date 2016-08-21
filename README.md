@@ -63,19 +63,15 @@ of Transcrypt to make more than hello world apps.
 
 ## What works?
 
-Mostly nothing - I have only tried what basic 'Hello World' tutorials implement.
-I discovered a few hours ago that my Pebble smart watch is already capable of
-running Python - this repo is an attempt at making sense of what that means :)
-
 So far:
  - Can create Cards
  - Can hook to button clicks
- - Can connect to Websockets
+ - Ajax requests work as expected
+ - Websockets work as expected
 
 ## What doesn't work?
 
- - Websockets to LAN won't work on emulator - they're running the code
-    elsewhere, not in your browser.
+ - Websockets to LAN won't work on CloudPebble's emulator ;)
 
 ## Installation
 
@@ -90,7 +86,6 @@ So far:
   - In terminal, run `pybble build app.py --copy`
   - Head over to https://cloudpebble.net/, create a new Pebble.JS project
   - Replace contents of app.js on cloudpebble with the minified,
-    auto-generated code from your computer - which was automatically
-    copied to your clipboard.
+    auto-generated javascript code from your computer - which was
+    automatically copied to your clipboard by the previous command.
   - Tap 'Run'
-
