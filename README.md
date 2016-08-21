@@ -79,9 +79,9 @@ So far:
 
 ## Installation
 
-  - `git clone https://github.com/hiway/pybble.git`
-  - `cd pybble`
-  - `pip install --editable . # Don't miss that last dot`
+    git clone https://github.com/hiway/pybble.git
+    cd pybble
+    pip install --editable . # Don't miss that last dot
 
 
 ## Usage
