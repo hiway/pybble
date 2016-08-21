@@ -89,3 +89,9 @@ So far:
     auto-generated javascript code from your computer - which was
     automatically copied to your clipboard by the previous command.
   - Tap 'Run'
+
+## Following pebblejs documentation to write Python apps
+
+  - Differences
+    - kwargs instead of dictionaries
+    - not real classes, functions returning JS objects
