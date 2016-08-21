@@ -7,13 +7,25 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
 ## Huh?
 
+I stumbled into this recently, and was quite surprised to realize that
+the long-time wish to write apps for Pebble watch in Python was
+already feasible if we jump through a few technical hoops.
+
+Here is some code that currently only demonstrates what is possible.
+I'm also structuring the glue code as a library for easy reuse.
+
+Pybble could evolve into a Python wrapper around Pebble.js that
+lets us write full Pebble apps that run on phone as compiled Javascript,
+and display on the Pebble watch - giving us a powerful environment to
+program our favourite smartwatch.
+
 There are a few components to this hack:
 
 
 ### A Pebble Watch or Emulator
 
-  Watch: https://www.pebble.com/
-  Emulator:  https://cloudpebble.net
+  - Watch: https://www.pebble.com/
+  - Emulator:  https://cloudpebble.net
 
 
 ### Pebble.js
@@ -46,11 +58,7 @@ diverse use cases.
   https://github.com/hiway/pybble/
 
 Pybble is an experiment to see if Pebble.js can be used with the help
-of Transcrypt to make more than hello world apps. This project could
-evolve into a Python wrapper around Pebble.js that lets us write full
-Pebble apps that run on phone as compiled Javascript, and display
-on the Pebble watch - giving us a powerful environment to program our
-favourite smartwatch.
+of Transcrypt to make more than hello world apps.
 
 
 ## What works?
