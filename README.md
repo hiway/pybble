@@ -8,7 +8,7 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
 ## Huh?
 
   - Transcrypt is a Python => Javascript transpiler
-  - Pebble.js lets you write Javascript apps that run directly on your Pebble
+  - Pebble.js lets you write Javascript apps that run directly on your Phone and display on your Pebble
   - Pybble is a bunch of scripts that uses the above two to help you
       transpile a Python app to JS; you can run that on your Pebble smartwatch.
       Tested on a real Pebble Classic, and on emulator for some newer versions.
