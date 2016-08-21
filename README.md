@@ -30,7 +30,7 @@ parity with Pebble.js (or Rocky.js, whichever works better, or at all)
 
 ## Installation
 
-  - `git clone git@github.com:hiway/pybble.git`
+  - `git clone https://github.com/hiway/pybble.git`
   - `cd pybble`
   - `pip install --editable . # Don't miss that last dot`
 
