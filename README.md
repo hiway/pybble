@@ -7,14 +7,50 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
 ## Huh?
 
-  - Transcrypt is a Python => Javascript transpiler
-  - Pebble.js lets you write Javascript apps that run directly on your Phone and display on your Pebble
-  - Pybble is a bunch of scripts that uses the above two to help you
-      transpile a Python app to JS; you can run that on your Pebble smartwatch.
-      Tested on a real Pebble Classic, and on emulator for some newer versions.
-  - It will be interesting to try the same on rocky.js, and preferably use that.
-      I'm using Pebble.js simply because I own an older watch which will not
-      get v4 firmware with rocky.js.
+There are a few components to this hack:
+
+
+### A Pebble Watch or Emulator
+
+  Watch: https://www.pebble.com/
+  Emulator:  https://cloudpebble.net
+
+
+### Pebble.js
+
+  https://github.com/pebble/pebblejs
+
+Pebble.js lets you write Javascript apps that run on your Phone and
+display on your Pebble, giving us freedom ot experiment with
+pure Python or Javascript libraries.
+
+
+### Transcrypt
+
+  http://transcrypt.org/
+
+Transcrypt takes your Python code and 'transpiles' it into Javascript
+code that is optimized to run inside a Javascript execution engine,
+which is what we get when we run a Pebble.js script.
+
+Since it is compiled to JS and does not have a Python runtime like
+Brython gives, we have limited access to Python standard library.
+However, by substituting them with native Javascript libraries and
+writing a little bit of glue code, you can close your eyes and
+pretend we're still in Python world. These tradeoffs are what allow
+diverse use cases.
+
+
+### Pybble
+
+  https://github.com/hiway/pybble/
+
+Pybble is an experiment to see if Pebble.js can be used with the help
+of Transcrypt to make more than hello world apps. This project could
+evolve into a Python wrapper around Pebble.js that lets us write full
+Pebble apps that run on phone as compiled Javascript, and display
+on the Pebble watch - giving us a powerful environment to program our
+favourite smartwatch.
 
 
 ## What works?
@@ -22,10 +58,6 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
 Mostly nothing - I have only tried what basic 'Hello World' tutorials implement.
 I discovered a few hours ago that my Pebble smart watch is already capable of
 running Python - this repo is an attempt at making sense of what that means :)
-
-If further experiments are successful and if Python could be used for more than
-toy programs, I will continue working on this project to get to feature
-parity with Pebble.js (or Rocky.js, whichever works better, or at all)
 
 
 ## Installation
