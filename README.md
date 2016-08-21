@@ -1,7 +1,7 @@
 # pybble
 
 
-## Python on Pebble
+## Python (almost) on Pebble
 
 It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
@@ -33,7 +33,7 @@ There are a few components to this hack:
   https://github.com/pebble/pebblejs
 
 Pebble.js lets you write Javascript apps that run on your Phone and
-display on your Pebble, giving us freedom ot experiment with
+display on your Pebble, giving us freedom to experiment with
 pure Python or Javascript libraries.
 
 
