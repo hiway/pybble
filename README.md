@@ -67,6 +67,15 @@ Mostly nothing - I have only tried what basic 'Hello World' tutorials implement.
 I discovered a few hours ago that my Pebble smart watch is already capable of
 running Python - this repo is an attempt at making sense of what that means :)
 
+So far:
+ - Can create Cards
+ - Can hook to button clicks
+ - Can connect to Websockets
+
+## What doesn't work?
+
+ - Websockets to LAN won't work on emulator - they're running the code
+    elsewhere, not in your browser.
 
 ## Installation
 
