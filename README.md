@@ -87,11 +87,10 @@ So far:
 ## Usage
 
   - Edit app.py in your preferred editor
-  - In terminal, run `./build.sh`
-  - This will create an app.js file next to your app.py
-  - Copy the content of app.js
+  - In terminal, run `pybble build app.py --copy`
   - Head over to https://cloudpebble.net/, create a new Pebble.JS project
   - Replace contents of app.js on cloudpebble with the minified,
-    auto-generated code from your computer.
+    auto-generated code from your computer - which was automatically
+    copied to your clipboard.
   - Tap 'Run'
 
