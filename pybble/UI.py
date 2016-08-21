@@ -21,8 +21,4 @@ def Menu(**kwargs):
     return __new__(__UI.Menu(kwargs))
 
 
-def Window(**kwargs):
-    return __new__(__UI.Window(kwargs))
-
-
 __pragma__('nokwargs')
