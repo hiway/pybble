@@ -23,9 +23,12 @@ home = UI.Card(title='Home')  # Initialize the card
 home.body('Use it (almost) like they show in Pebble.js API :)')
 
 # A regular function as callback for click
-home.on('click', 'up', test_websock)
+home.on('click', 'up', on_click_up)
 
 # A nameless function/ lambda for callback
 home.on('click', 'select', lambda e: console.log('Select was clicked.'))
+
+# Test webhook
+home.on('click', 'down', test_websock)
 
 home.show()  # Show the Card

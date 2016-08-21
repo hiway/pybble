@@ -6,8 +6,12 @@ setup(
     py_modules=['pybble'],
     install_requires=[
         'transcrypt',
+        'envoy',
+        'click',
+        'pyperclip'
     ],
     entry_points='''
         [console_scripts]
+        pybble=cli:cli
     ''',
 )
