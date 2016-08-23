@@ -7,7 +7,7 @@ class WebsocketTest(object):
         self.connected = False
 
     def connect(self, url):
-        self.socket = websocket(url)
+        self.socket = websocket.Websocket(url)
         self.socket.onerror = self.on_error
         self.socket.onopen = self.on_open
         self.socket.onclose = self.on_close
