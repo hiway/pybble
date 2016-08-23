@@ -5,8 +5,8 @@
 
 It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
+```python
     from pybble.pebblejs import console, UI, websocket
-
 
     class WebsocketTest(object):
         def __init__(self):
@@ -43,7 +43,6 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
             msg = UI.Card(title='RECV', body=message.data)
             msg.show()
 
-
     wsecho = WebsocketTest()
 
     home = UI.Card(title='Pybble!', subtitle='Python Apps for Pebble')
@@ -55,7 +54,7 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
     home.on('click', 'down', lambda e: wsecho.send('WS: Down was clicked'))
 
     home.show()
-
+```
 
 ## Huh?
 
