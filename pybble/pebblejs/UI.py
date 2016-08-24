@@ -21,6 +21,11 @@ def Menu(**kwargs):
     return __new__(__UI.Menu(kwargs))
 
 
+def Circle(**kwargs):
+    circle = __new__(__UI.Circle(kwargs))
+    return circle
+
+
 # todo: Elements: Circle, Image, Line, Radial, Rect, Text, TimeText
 
 
