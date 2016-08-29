@@ -17,7 +17,7 @@ def cli():
                                            'javascript to system clipboard.')
 def build(file, copy):
     click.echo('Transpiling to Javascript...')
-    t = envoy.run('transcrypt -f -p .none {}'.format(file))
+    t = envoy.run('transcrypt -p .none {}'.format(file))
 
     if t.status_code != 0:
         click.echo(t.std_out)
