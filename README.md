@@ -6,6 +6,16 @@
 It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
 ```python
+    from pybble.pebblejs import console, UI
+
+    home = UI.Card(title='Pybble', subtitle='Says', body='Hello, world!')
+
+    home.show()
+```
+
+More?
+
+```python
     from pybble.pebblejs import console, UI, websocket
 
     class WebsocketTest(object):
@@ -58,28 +68,39 @@ It's a hack; it works. Here's a barely-even-barebones proof of concept.
 
 ## Huh?
 
-I stumbled into this recently, and was quite surprised to realize that
-the long-time wish to write apps for Pebble watch in Python was
-already feasible if we jump through a few technical hoops.
+You can write an app for your Pebble watch using your knowledge of 
+Python. In the background it gets converted into Javascript
+by Transcrypt, This Javascript version of your app gets compiled by 
+CloudPebble.net and installed to your phone + watch. Your app 
+runs on your phone paired to the Pebble, and sends the UI to and
+gets events such as button presses from the watch through Bluetooth. 
 
-Here is some code that currently only demonstrates what is possible.
-I'm also structuring the glue code as a library for easy reuse.
+This unfortunately makes the interface slightly sluggish compared 
+to a native Pebble app. However, you get fewer limits on memory
+and better processing speed for heavy lifting behind the 
+interface - on your phone.
 
-Pybble could evolve into a Python wrapper around Pebble.js that
-lets us write full Pebble apps that run on phone as compiled Javascript,
-and display on the Pebble watch - giving us a powerful environment to
-program our favourite smartwatch.
+I recently stumbled into this possiblity and was able to make a hello
+world app run. This repository is an exploration-in-progress of 
+what else is possible. Star and stick around, fork, tinker and
+send pull requests if this sort of thing interests you :)
 
-There are a few components to this hack:
+## But Why?
 
+Because, why not?
 
+  - No real reason except my bias towards Python for being the most versatile 
+    proverbial hammer that I use *all the nails* in the world.
+  - Because writing Python makes me happy, and reading Python makes me happier.
+
+## You will need:
 ### A Pebble Watch or Emulator
 
   - Watch: https://www.pebble.com/
   - Emulator:  https://cloudpebble.net
 
 
-### Pebble.js
+### PebbleJS
 
   https://github.com/pebble/pebblejs
 
