@@ -1,20 +1,17 @@
 from pybble.pebblejs import UI
 from pybble.pebblejs.vector2 import Vector2
 
-wind = UI.Window()
-vect = Vector2(72, 84)
+window = UI.Window()
+
 
 text = UI.Text(
-    position=vect,
-    backgroundColor='white',
+    position=Vector2(0, 50),
+    size=Vector2(144,20),
+    textAlign='center',
+    font='gothic-24',    
     text="Hello, World!",
+    color='white',
     )
 
-# circle = UI.Circle(
-#     position=vect,
-#     radius=50,
-#     backgroundColor='white')
-
-wind.add(text)
-# wind.add(circle)
-wind.show()
+window.add(text)
+window.show()
